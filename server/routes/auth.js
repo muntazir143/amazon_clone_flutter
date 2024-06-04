@@ -4,6 +4,8 @@ const User = require("../models/user");
 
 const authRouter = express.Router();
 
+// Signup Route
+
 authRouter.post("/api/signup", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -27,5 +29,7 @@ authRouter.post("/api/signup", async (req, res) => {
     res.status(500).json({ error: e.message });
   }
 });
+
+// Signin Route
 
 module.exports = authRouter;
