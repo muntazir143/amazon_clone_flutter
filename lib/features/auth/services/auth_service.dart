@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:amazon_clone_flutter/common/widgets/bottom_bar.dart';
 import 'package:amazon_clone_flutter/constants/error_handling.dart';
 import 'package:amazon_clone_flutter/constants/global_variables.dart';
 import 'package:amazon_clone_flutter/constants/utils.dart';
@@ -71,7 +72,7 @@ class AuthService {
             await prefs.setString(
                 "x-auth-token", jsonDecode(response.body)["token"]);
             Navigator.pushNamedAndRemoveUntil(
-                context, HomeScreen.routeName, (route) => false);
+                context, BottomBar.routeName, (route) => false);
           });
     } catch (e) {
       showSnackbar(context, e.toString());
