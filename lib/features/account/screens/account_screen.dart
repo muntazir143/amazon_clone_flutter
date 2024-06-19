@@ -1,4 +1,6 @@
 import 'package:amazon_clone_flutter/constants/global_variables.dart';
+import 'package:amazon_clone_flutter/features/account/widgets/orders.dart';
+import 'package:amazon_clone_flutter/features/account/widgets/top_buttons.dart';
 import 'package:amazon_clone_flutter/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -67,6 +69,7 @@ class AccountScreen extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 22,
                           color: Colors.black,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],
@@ -75,6 +78,14 @@ class AccountScreen extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(
+            height: 10,
+          ),
+          const TopButtons(),
+          const SizedBox(
+            height: 20,
+          ),
+          const Orders(),
         ],
       ),
     );
